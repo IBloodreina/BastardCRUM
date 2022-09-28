@@ -91,7 +91,7 @@ function burgerPictureChange(hcode) {
     
 }
 
-ShowMenu()
+function ShowMenu()
 {
     optionWrap.classList.remove("hide")
 }
