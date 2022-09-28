@@ -17,7 +17,7 @@ const burgerData = [
 const hamburger = document.querySelector(".bastard .hamburger") 
 const ingredients = document.querySelector(".bastard .ingredients")
 const burgerPicture = document.querySelector(".bastard img.Burger")
-const show = document.querySelector(".optionWrap")
+const show = document.querySelector(".grabMe")
 
 renderBurgers()
 
@@ -91,8 +91,8 @@ function burgerPictureChange(hcode) {
     
 }
 
-function ShowMenu()
+function showMenu()
 {
-    optionWrap.classList.remove("hide")
+    show.classList.remove("grabMe")
 }
 
