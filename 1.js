@@ -4,6 +4,7 @@ const manhattan = ["120 gram sojabönor", "chipotle dressing", "jalapeno"]
 const newYork = ["120 gram nötkött", "sallad", "tomat", "rödlök", "dubbel ost"]
 const texas = ["2x120 gram nötkött", "sallad", "jalapeno", "rödlök", "cheddar"]
 
+ 
 const burgerData = [
     // { hamburgerCode: "01", hamburgerName: "Cheese meal", ingredients: {cheeseMeal}},
     { hamburgerCode: "01", hamburgerName: "Double cheese", ingredients: doubleCheese},
@@ -16,7 +17,7 @@ const burgerData = [
 const hamburger = document.querySelector(".bastard .hamburger") 
 const ingredients = document.querySelector(".bastard .ingredients")
 const burgerPicture = document.querySelector(".bastard img.Burger")
-
+const show = document.querySelector(".optionWrap")
 
 renderBurgers()
 
@@ -92,7 +93,7 @@ function burgerPictureChange(hcode) {
 
 ShowMenu()
 {
-    wrap.classList.remove("hide")
+    optionWrap.classList.remove("hide")
 }
 
 let timeDate = Date.now()
