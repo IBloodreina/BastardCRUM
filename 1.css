@@ -1,4 +1,7 @@
-
+body
+{
+    background-color: bisque;
+}
 .optionWrap
 {
     border: solid;
