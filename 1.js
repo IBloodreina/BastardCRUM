@@ -96,4 +96,3 @@ function showMenu()
     show.classList.remove("grabMe")
 }
 
-let timeDate = Date.now()
