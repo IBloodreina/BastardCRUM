@@ -7,6 +7,9 @@
 
 }
 
+.hide {
+    display: none;
+}
 /*body {
     background-color: darkgray;
     margin:20px;

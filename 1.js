@@ -1,7 +1,9 @@
 const cheeseMeal = ["cheese", "cheezy dressing", "tomato"]
 const spicyBurger = ["cheese", "cheezy dressing", "tomato"]
 const veganTexas = ["vegan cheese", "chipotle dressing", "jalapeno"]
- 
+
+const wrap = document.querySelector(".wrap")
+
 const burgerData = [
     // { hamburgerCode: "01", hamburgerName: "Cheese meal", ingredients: {cheeseMeal}},
     { hamburgerCode: "01", hamburgerName: "Cheese meal", cheeseMeal},
@@ -38,5 +40,5 @@ function burgerChanged() {
 
 ShowMenu()
 {
-    
+    wrap.classList.remove("hide")
 }
