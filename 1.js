@@ -16,8 +16,9 @@ const burgerData = [
 
 const hamburger = document.querySelector(".bastard .hamburger") 
 const ingredients = document.querySelector(".bastard .ingredients")
-const burgerPicture = document.querySelector(".bastard img.Burger")
+const burgerPicture = document.querySelector(".bastard img.burgerPic")
 const show = document.querySelector(".grabMe")
+const show2 = document.querySelector(".grabMe2")
 
 renderBurgers()
 
@@ -50,7 +51,7 @@ function renderIngredients() {
     for (let m of selectedBurger.ingredients) {
         console.log(m)
 
-        html += `<li value="">${m}</li>`
+        html += `${m} `
 
     }
     
@@ -94,5 +95,6 @@ function burgerPictureChange(hcode) {
 function showMenu()
 {
     show.classList.remove("grabMe")
+    show2.classList.remove("grabMe2")
 }
 

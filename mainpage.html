@@ -39,18 +39,20 @@
             </div>
         </div>
     </nav>
+    <div><img class="logoHeader" src="CRUHM BURGERSSmall.png" alt=""></div>
+    
 
     <article class="bastard">
-        <img src="" class="Burger" alt="">
+        <img src="" class="burgerPic" alt="">
         <div></div>
 
         <select class="hamburger" onchange="burgerChanged()">
         </select>
 
 
-        <ul class="ingredients" onchange="burgerIngredients()">
-            <!-- <li>test</li> -->
-        </ul>
+        <p class="ingredients" onchange="burgerIngredients()">
+           
+        </p>
 
         
 
@@ -58,6 +60,19 @@
         </section>
 
     </article>
+
+    <!--Skall komma fram när man valt burgare-->
+    <div class="breadChoice">
+        <input class="breadChoiceInput" type="radio" name="bread" id="flexRadioDefault1">
+        <label class="breadChoiceInput" for="flexRadioDefault1">
+            Vanligt bröd
+        </label>
+        <input class="form-check-input" type="radio" name="bread" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+            Glutenfritt bröd
+        </label>
+    </div>
+
 
     <div class="menuNav"> Drinks<button class="button" onclick="showMenu()"> ˅</button>
     </div>
@@ -85,23 +100,11 @@
     </div>
     <br>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-            Vanligt bröd
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
-            Glutenfritt bröd
-        </label>
-    </div>
 
 
     <div class="menuNav"> Add a plant based dip<button class="button" onclick="showMenu()"> ˅</button>
     </div>
-        <div class="grabMe">
+        <div class="grabMe2">
         <div class="items">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" name="dipp" id="dipp1" value="option1"checked>
