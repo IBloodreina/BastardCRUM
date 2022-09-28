@@ -90,8 +90,6 @@ function burgerPictureChange(hcode) {
     
 }
 
-
-
 ShowMenu()
 {
     wrap.classList.remove("hide")
