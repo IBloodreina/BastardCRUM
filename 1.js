@@ -42,3 +42,5 @@ ShowMenu()
 {
     wrap.classList.remove("hide")
 }
+
+let timeDate = Date.now()
