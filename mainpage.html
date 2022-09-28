@@ -41,6 +41,8 @@
     </nav>
 
     <article class="bastard">
+        <img src="" class="Burger" alt="">
+        <div></div>
 
         <select class="hamburger" onchange="burgerChanged()">
         </select>
@@ -50,31 +52,32 @@
             <!-- <li>test</li> -->
         </ul>
 
-        <img src="" class="Burger" alt="">
+        
 
         <section class="result hide">
         </section>
 
     </article>
 
-    Drinks<button onclick="showMenu()">↓</button>
-    <div class="grabMe">
-        <div class="drink-check">
+    <div class="menuNav"> Drinks<button class="button" onclick="showMenu()"> ˅</button>
+    </div>
+        <div class="grabMe">
+        <div class="items">
             <input class="drink-check-input" type="radio" name="drink">
             <label class="drink-check-label">Coca Cola</label>
         </div>
 
-        <div class="drink-check">
+        <div class="items">
             <input class="drink-check-input" type="radio" name="drink">
             <label class="drink-check-label">Fanta</label>
         </div>
 
-        <div class="drink-check">
+        <div class="items">
             <input class="drink-check-input" type="radio" name="drink">
             <label class="drink-check-label">Sprite</label>
         </div>
 
-        <div class="drink-check">
+        <div class="items">
             <input class="drink-check-input" type="radio" name="drink">
             <label class="drink-check-label">Dr.Pepper</label>
 
@@ -96,31 +99,31 @@
     </div>
 
 
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Add a plant based dip
-        </button>
-        <ul class="dropdown-menu">
+    <div class="menuNav"> Add a plant based dip<button class="button" onclick="showMenu()"> ˅</button>
+    </div>
+        <div class="grabMe">
+        <div class="items">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"checked>
+                <input class="form-check-input" type="checkbox" name="dipp" id="dipp1" value="option1"checked>
                 <label class="form-check-label" for="exampleRadios1">
                   None
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <input class="form-check-input" type="checkbox" name="dipp" id="dipp2" value="option2">
                 <label class="form-check-label" for="exampleRadios2">
                   Bastard aioili
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                <input class="form-check-input" type="checkbox" name="dipp" id="dipp3" value="option3">
                 <label class="form-check-label" for="exampleRadios3">
                  Truffle mayo Dip
                 </label>
               </div>
-        </ul>
     </div>
+
+
 
 
     <div class="card text-center">
