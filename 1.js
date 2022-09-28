@@ -96,4 +96,3 @@ function ShowMenu()
     optionWrap.classList.remove("hide")
 }
 
-let timeDate = Date.now()
