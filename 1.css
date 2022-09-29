@@ -2,14 +2,27 @@ body
 {
     background-color: bisque;
 }
-.optionWrap
+.menuNav
 {
-    border: solid;
-    background-color: grey;
-    margin: 50px;
-
+    display: flex;
+    background-color: lightgrey;
+    justify-content: space-between;
+    margin-right: 200px;
+    margin-left: 20px;
+}
+.items
+{
+    margin-left: 20px;
 }
 
+.button{
+    
+    width: 28px;
+    height: 28px;
+    background: darkgray;
+    border-radius: 50px;
+    
+}
 .grabMe {
     display: none;
 }
