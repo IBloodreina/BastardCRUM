@@ -39,42 +39,59 @@
             </div>
         </div>
     </nav>
-<div class="moveContent">
+    <div><img class="logoHeader" src="logoSmall.png" alt=""></div>
+
+
     <article class="bastard">
+        <img src="" class="burgerPic" alt="">
+        <div></div>
 
         <select class="hamburger" onchange="burgerChanged()">
         </select>
 
 
-        <ul class="ingredients" onchange="burgerIngredients()">
-            <!-- <li>test</li> -->
-        </ul>
+        <p class="ingredients" onchange="burgerIngredients()">
 
-        <img src="" class="Burger" alt="">
+        </p>
+
+
 
         <section class="result hide">
         </section>
 
     </article>
+    <!--Skall komma fram när man valt burgare-->
+    <div class="breadChoice">
+        <input class="breadChoiceInput" type="radio" name="bread" id="flexRadioDefault1">
+        <label class="breadChoiceInput" for="flexRadioDefault1">
+            Vanligt bröd
+        </label>
+        <input class="form-check-input" type="radio" name="bread" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+            Glutenfritt bröd
+        </label>
+    </div>
 
-    Drinks<button onclick="showMenu(); getDrink()">ok</button>
+
+    <div class="menuNav"> Drinks<button class="button" onclick="showMenu();getDrink()"> ˅</button>
+    </div>
     <div class="grabMe">
-        <div class="drink-check">
+        <div class="items">
             <input class="drink-check-input cola" type="radio" name="drink" value="25">
             <label class="drink-check-label">Coca Cola</label>
         </div>
 
-        <div class="drink-check">
+        <div class="items">
             <input class="drink-check-input" type="radio" name="drink" value="20">
             <label class="drink-check-label">Fanta</label>
         </div>
 
-        <div class="drink-check">
+        <div class="items">
             <input class="drink-check-input" type="radio" name="drink" value="30">
             <label class="drink-check-label">Sprite</label>
         </div>
 
-        <div class="drink-check">
+        <div class="items">
             <input class="drink-check-input" type="radio" name="drink" value="27">
             <label class="drink-check-label">Dr.Pepper</label>
 
@@ -82,76 +99,62 @@
     </div>
     <br>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-            Vanligt bröd
-        </label>
+
+
+    <div class="menuNav"> Add a plant based dip<button class="button" onclick="showMenu()"> ˅</button>
     </div>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
-            Glutenfritt bröd
-        </label>
-    </div>
-
-
-     <div class="dropdown">
-       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-
-          Add a plant based dip
-        </button>
-        <ul class="dropdown-menu">
+    <div class="grabMe2">
+        <div class="items">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"checked>
+                <input class="form-check-input" type="checkbox" name="dipp" id="dipp1" value="option1" checked>
                 <label class="form-check-label" for="exampleRadios1">
-                  None
+                    None
                 </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="dipp" id="dipp2" value="option2">
                 <label class="form-check-label" for="exampleRadios2">
-                  Bastard aioili
+                    Bastard aioili
                 </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="dipp" id="dipp3" value="option3">
                 <label class="form-check-label" for="exampleRadios3">
-                 Truffle mayo Dip
+                    Truffle mayo Dip
                 </label>
-              </div>
-        </ul>
-    </div>
-</div>
-
-<div class="totalSum">Price</div>
-
-
-
-    <div class="card text-center">
-        <div class="card-header">
-            Crum Burgers
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Tack för att du handlar av oss</h5>
-            <p class="card-text">Beloppet på ordern är: </p>
-            <a href="#" class="btn btn-primary">Klicka för skicka order</a>
-        </div>
-        <div class="card-footer text-muted">
-            <p>Date for order is: <span id='date-time'></span>.</p>
+            </div>
         </div>
     </div>
 
 
-    <script src="1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+        <div class="totalSum">Price</div>
+
+
+
+        <div class="card text-center">
+            <div class="card-header">
+                Crum Burgers
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Tack för att du handlar av oss</h5>
+                <p class="card-text">Beloppet på ordern är: </p>
+                <a href="#" class="btn btn-primary">Klicka för skicka order</a>
+            </div>
+            <div class="card-footer text-muted">
+                <p>Date for order is: <span id='date-time'></span>.</p>
+            </div>
+        </div>
+
+
+        <script src="1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
 
         <script>
             //var dt = new Date();
-            document.getElementById('date-time').innerHTML= new Date();
-            </script>
+            document.getElementById('date-time').innerHTML = new Date();
+        </script>
 
 </body>
 
