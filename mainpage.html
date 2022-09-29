@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Region</title>
+    <title>Burgers</title>
     <link rel="stylesheet" href="1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
 </head>
 
-<body>
+<body class="test">
 
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
@@ -39,7 +39,7 @@
             </div>
         </div>
     </nav>
-
+<div class="moveContent">
     <article class="bastard">
 
         <select class="hamburger" onchange="burgerChanged()">
@@ -57,25 +57,25 @@
 
     </article>
 
-    Drinks<button onclick="showMenu()">ok</button>
+    Drinks<button onclick="showMenu(); getDrink()">ok</button>
     <div class="grabMe">
         <div class="drink-check">
-            <input class="drink-check-input" type="radio" name="drink">
+            <input class="drink-check-input cola" type="radio" name="drink" value="25">
             <label class="drink-check-label">Coca Cola</label>
         </div>
 
         <div class="drink-check">
-            <input class="drink-check-input" type="radio" name="drink">
+            <input class="drink-check-input" type="radio" name="drink" value="20">
             <label class="drink-check-label">Fanta</label>
         </div>
 
         <div class="drink-check">
-            <input class="drink-check-input" type="radio" name="drink">
+            <input class="drink-check-input" type="radio" name="drink" value="30">
             <label class="drink-check-label">Sprite</label>
         </div>
 
         <div class="drink-check">
-            <input class="drink-check-input" type="radio" name="drink">
+            <input class="drink-check-input" type="radio" name="drink" value="27">
             <label class="drink-check-label">Dr.Pepper</label>
 
         </div>
@@ -121,6 +121,10 @@
               </div>
         </ul>
     </div>
+</div>
+
+<div class="totalSum">Price</div>
+
 
 
     <div class="card text-center">
@@ -144,8 +148,8 @@
         crossorigin="anonymous"></script>
 
         <script>
-            var dt = new Date();
-            document.getElementById('date-time').innerHTML=dt;
+            //var dt = new Date();
+            document.getElementById('date-time').innerHTML= new Date();
             </script>
 
 </body>

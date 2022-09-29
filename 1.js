@@ -6,18 +6,19 @@ const texas = ["2x120 gram nötkött", "sallad", "jalapeno", "rödlök", "chedda
 
  
 const burgerData = [
-    // { hamburgerCode: "01", hamburgerName: "Cheese meal", ingredients: {cheeseMeal}},
-    { hamburgerCode: "01", hamburgerName: "Double cheese", ingredients: doubleCheese},
-    { hamburgerCode: "02", hamburgerName: "London", ingredients: london},
-    { hamburgerCode: "03", hamburgerName: "Manhattan Madness", ingredients: manhattan},
-    { hamburgerCode: "04", hamburgerName: "New York", ingredients: newYork},
-    { hamburgerCode: "05", hamburgerName: "Texas YiHaa", ingredients: texas},
+    { hamburgerCode: "01", burgerPrice: 65, hamburgerName: "Double cheese", ingredients: doubleCheese},
+    { hamburgerCode: "02", burgerPrice: 70, hamburgerName: "London", ingredients: london},
+    { hamburgerCode: "03", burgerPrice: 75, hamburgerName: "Manhattan Madness", ingredients: manhattan},
+    { hamburgerCode: "04", burgerPrice: 80, hamburgerName: "New York", ingredients: newYork},
+    { hamburgerCode: "05", burgerPrice: 85, hamburgerName: "Texas YiHaa", ingredients: texas},
 ]
 
 const hamburger = document.querySelector(".bastard .hamburger") 
 const ingredients = document.querySelector(".bastard .ingredients")
 const burgerPicture = document.querySelector(".bastard img.Burger")
 const show = document.querySelector(".grabMe")
+const grabPrice = document.querySelector(".totalSum")
+let burgerPrice;
 
 renderBurgers()
 
@@ -57,6 +58,10 @@ function renderIngredients() {
     ingredients.innerHTML = html
 
     let hcode = selectedBurger.hamburgerCode
+    let bPrice = selectedBurger.burgerPrice
+    burgerPrice = bPrice
+    console.log(bPrice)
+    grabPrice.innerText = "Total price: " + burgerPrice
 
     burgerPictureChange(hcode) 
 
@@ -95,4 +100,28 @@ function showMenu()
 {
     show.classList.remove("grabMe")
 }
+
+function getDrink() {
+
+    if (document.querySelector('input[name="drink"]:checked') === null) {
+        return
+    }
+
+    let drinkPrice = document.querySelector('input[name="drink"]:checked').value;
+    console.log(drinkPrice)
+
+    calculateTotalPrice(drinkPrice)
+
+
+}
+
+function calculateTotalPrice(drink) {
+
+    let priceDrinkInt = parseInt(drink)
+    grabPrice.innerText = "Total price: " + (burgerPrice + priceDrinkInt)
+
+
+}
+
+
 

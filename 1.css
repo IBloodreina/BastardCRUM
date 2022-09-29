@@ -14,6 +14,17 @@ body
     display: none;
 }
 
-/* .optionWrap {
-    display: none;
-} */
+.moveContent {
+    border: solid 1px;
+    border-color: grey;
+    padding: 20px;
+    
+
+    
+}
+
+body,
+.test {
+    background-color: lightblue;
+}
+
