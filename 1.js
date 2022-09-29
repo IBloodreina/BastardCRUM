@@ -4,34 +4,34 @@ const manhattan = ["120 gram sojabönor", "chipotle dressing", "jalapeno"]
 const newYork = ["120 gram nötkött", "sallad", "tomat", "rödlök", "dubbel ost"]
 const texas = ["2x120 gram nötkött", "sallad", "jalapeno", "rödlök", "cheddar"]
 
- 
+
 const burgerData = [
-    { hamburgerCode: "01", burgerPrice: 65, hamburgerName: "Double cheese", ingredients: doubleCheese},
-    { hamburgerCode: "02", burgerPrice: 70, hamburgerName: "London", ingredients: london},
-    { hamburgerCode: "03", burgerPrice: 75, hamburgerName: "Manhattan Madness", ingredients: manhattan},
-    { hamburgerCode: "04", burgerPrice: 80, hamburgerName: "New York", ingredients: newYork},
-    { hamburgerCode: "05", burgerPrice: 85, hamburgerName: "Texas YiHaa", ingredients: texas},
+    { hamburgerCode: "01", burgerPrice: 65, hamburgerName: "Double cheese", ingredients: doubleCheese },
+    { hamburgerCode: "02", burgerPrice: 70, hamburgerName: "London", ingredients: london },
+    { hamburgerCode: "03", burgerPrice: 75, hamburgerName: "Manhattan Madness", ingredients: manhattan },
+    { hamburgerCode: "04", burgerPrice: 80, hamburgerName: "New York", ingredients: newYork },
+    { hamburgerCode: "05", burgerPrice: 85, hamburgerName: "Texas YiHaa", ingredients: texas },
 ]
 
-const hamburger = document.querySelector(".bastard .hamburger") 
+const hamburger = document.querySelector(".bastard .hamburger")
 const ingredients = document.querySelector(".bastard .ingredients")
 const burgerPicture = document.querySelector(".bastard img.burgerPic")
-const show = document.querySelector(".grabMe")
-const show2 = document.querySelector(".grabMe2")
+const grabMe1 = document.querySelector(".grabMe1")
+const grabMe2 = document.querySelector(".grabMe2")
 const grabPrice = document.querySelector(".totalSum")
 let burgerPrice;
 
 renderBurgers()
 
-function renderBurgers () {
+function renderBurgers() {
     let html = `<option value="">Välj burgare...</option>`
 
-    for(let c of burgerData) {
+    for (let c of burgerData) {
         const name = c.hamburgerName
         const code = c.hamburgerCode
 
         html += `<option value="${code}">${name}</option>`
-        
+
     }
     hamburger.innerHTML = html
 
@@ -45,9 +45,9 @@ function burgerChanged() {
 
 function renderIngredients() {
 
-    let html= ""
+    let html = ""
 
-    const selectedBurger = burgerData.find(b => b.hamburgerCode === hamburger.value) 
+    const selectedBurger = burgerData.find(b => b.hamburgerCode === hamburger.value)
 
     for (let m of selectedBurger.ingredients) {
         console.log(m)
@@ -55,7 +55,7 @@ function renderIngredients() {
         html += `${m} `
 
     }
-    
+
     ingredients.innerHTML = html
 
     let hcode = selectedBurger.hamburgerCode
@@ -64,7 +64,7 @@ function renderIngredients() {
     console.log(bPrice)
     grabPrice.innerText = "Total price: " + burgerPrice
 
-    burgerPictureChange(hcode) 
+    burgerPictureChange(hcode)
 
 }
 
@@ -84,7 +84,7 @@ function burgerPictureChange(hcode) {
         burgerPicture.src = "burgers/manhattan.png"
         return
     }
-    
+
     if (hcode === "04") {
         burgerPicture.src = "burgers/newyork.png"
         return
@@ -94,15 +94,20 @@ function burgerPictureChange(hcode) {
         burgerPicture.src = "burgers/texas.png"
         return
     }
-    
+
 }
 
-function showMenu()
-{
-    show.classList.remove("grabMe")
-    show2.classList.remove("grabMe2")
-}
+function showMenu(grabNumer) {
+    if (grabNumer === 1) {
+        grabMe1.classList.toggle("hideMe")
+    }
+    if (grabNumer === 2) {
+        grabMe2.classList.toggle("hideMe")
+    }
 
+    //document.querySelector(".grabMe"+grabNumer).toggle()
+}
+ 
 function getDrink() {
 
     if (document.querySelector('input[name="drink"]:checked') === null) {
