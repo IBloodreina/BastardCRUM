@@ -48,6 +48,12 @@
     justify-content: center;
 }
 
+.totalSum
+{
+    margin-left: 400px;
+    font-size: 20px;
+    padding: 10px;
+}
 .button{
     
     width: 28px;
