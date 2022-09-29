@@ -100,7 +100,7 @@ function burgerPictureChange(hcode) {
 function showMenu()
 {
     show.classList.remove("grabMe")
-    show.classList.remove("grabMe2")
+    show2.classList.remove("grabMe2")
 }
 
 function getDrink() {
