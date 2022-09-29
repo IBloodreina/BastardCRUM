@@ -18,6 +18,7 @@ const ingredients = document.querySelector(".bastard .ingredients")
 const burgerPicture = document.querySelector(".bastard img.burgerPic")
 const grabMe1 = document.querySelector(".grabMe1")
 const grabMe2 = document.querySelector(".grabMe2")
+const grabMe3 = document.querySelector(".grabMe3")
 const grabPrice = document.querySelector(".totalSum")
 let burgerPrice;
 
@@ -103,6 +104,9 @@ function showMenu(grabNumer) {
     }
     if (grabNumer === 2) {
         grabMe2.classList.toggle("hideMe")
+    }
+    if (grabNumer === 3) {
+        grabMe3.classList.toggle("hideMe")
     }
 
     //document.querySelector(".grabMe"+grabNumer).toggle()
